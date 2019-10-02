@@ -9,7 +9,7 @@ mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true});
 
  let db = mongoose.connection;
 
-app.get('/', async (req, res) =>{ 
+app.get('/node', async (req, res) =>{ 
     let a = await air_data.find().where('_id').exec((err, resp)=> {res.send(resp);})
     // res.send(a);
 })
